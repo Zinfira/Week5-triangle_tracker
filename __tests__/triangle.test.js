@@ -4,6 +4,8 @@ describe('Triangle', () => {
 
   test('should correctly create a triangle object with three lengths', () => {
     var triangle = new Triangle(2,4,5);
+    console.log(triangle);
+    debugger;
     expect(triangle.side1).toEqual(2);
     expect(triangle.side2).toEqual(4);
     expect(triangle.side3).toEqual(5);
@@ -28,4 +30,16 @@ test('should correctly determine whether three lengths make an isosceles triangl
 test('should correctly determine whether three lengths equals an equilateral triangle', () => {
   var equilTriangle = new Triangle(3,3,3)
   expect(equilTriangle.checkType()).toEqual("equilateral triangle");
-})
+});
+
+describe('Triangle', () => {
+  var reusableTriangle;
+
+  beforeEach(() => {
+    reusableTriangle = new Triangle(5, 5, 5);
+  });
+
+  test('should show how beforeEach() works', () => {
+    console.log(reusableTriangle);
+  });
+});
